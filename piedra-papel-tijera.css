@@ -1,0 +1,55 @@
+main {
+ text-align:center;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ color:orangered;  
+ width: 50%;
+ margin: auto; 
+}
+main h1 {
+  color: blue;
+}
+main ol {
+  list-style-position: inside;
+}
+
+main form {
+  width: 50%;
+  margin: auto;
+  background-color: lightgray;
+  color: blue;
+  padding: 5px;
+  border-radius: 30px;
+  border: medium ridge darkgray; 
+}
+
+#resultado {
+  height: 120px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p#presultado {
+  color: orangered;
+}
+
+select#valor {
+  margin: 10px;
+  margin-top: 10px;
+  height: 35px;
+  width: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 110%;
+}
+button {
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  font-family:Arial, Helvetica, sans-serif;
+  color: #fff;
+  background-color: blue;
+  font-size: 120%;
+  border: none;
+  border-radius: 8px;
+}
+button:hover {
+  cursor:pointer;
+}
+
