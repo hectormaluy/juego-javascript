@@ -73,7 +73,6 @@ function jugar(jugadaUsuario) {
       textoResultado.classList.remove("gana-maquina");
     }
 
-
     textoResultado.innerText = resultado;
     jugadorResultado.innerText = valorUsuario;
     maquinaResultado.innerText = valorMaquina;
