@@ -1,55 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --border-color: grey;
+  --option-color: grey;
+  --option-color-active: lightgrey;
+  --color-ganador: #14A44D;
+  --color-perdedor: #DC4C64;
+}
+
+body{
+  margin: 0;
+}
+
 main {
- text-align:center;
  font-family: Verdana, Geneva, Tahoma, sans-serif;
- color:orangered;  
- width: 50%;
- margin: auto; 
-}
-main h1 {
-  color: blue;
-}
-main ol {
-  list-style-position: inside;
+ display: flex;
+ width: 100%;
+ height: 100vh;
+ align-items: center;
+ flex-direction: column;
+ background-image: url('./images/textura.avif');
 }
 
-main form {
-  width: 50%;
-  margin: auto;
-  background-color: lightgray;
-  color: blue;
-  padding: 5px;
-  border-radius: 30px;
-  border: medium ridge darkgray; 
+h1 {
+  color: hsl(0,0,70%);
+  text-align: center;
 }
 
-#resultado {
-  height: 120px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.game-container {
+  width: 400px;
+  height: 400px;
+  border: 3px ridge var(--border-color);
+  margin-top: 30px;
+  box-shadow: 2px 2px 4px darkgrey;
+  background-color: hsl(0, 0%, 100%);
 }
 
-p#presultado {
-  color: orangered;
+.game-container .titulo {
+  font-size: 24px;
+  text-align: center;
 }
 
-select#valor {
-  margin: 10px;
-  margin-top: 10px;
-  height: 35px;
-  width: 200px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 110%;
-}
-button {
-  margin-bottom: 10px;
-  padding: 10px 15px;
-  font-family:Arial, Helvetica, sans-serif;
-  color: #fff;
-  background-color: blue;
-  font-size: 120%;
-  border: none;
-  border-radius: 8px;
-}
-button:hover {
-  cursor:pointer;
+.game-container .opciones {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 24px;
 }
 
+.game-container .opciones div {
+  font-size: 160%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--option-color);
+  cursor: pointer;
+  box-shadow: 2px 2px 4px darkgrey;
+}
+
+.game-container .opciones div:active {
+  background-color: var(--option-color-active);
+}
+
+.game-container .opciones div:nth-child(3) {
+  color: green;
+}
+
+.resultado {
+  display: flex; 
+  flex-wrap: wrap;
+  text-align: center;
+}
+.resultado p {
+  font-size: 20px;
+}
+.resultado p:nth-child(1) {
+  flex: 100%;
+  height: 45px;
+}
+.resultado p:nth-child(2) {
+  flex: 50%;
+}
+.resultado p:nth-child(3) {
+  flex: 50%;
+}
+
+.game-container .resultado p span {
+  text-align: center;
+  font-size: 160%;
+  display: block;
+  margin-top: 6px;
+ }
+
+.game-container .resultado p:nth-child(1) span {
+  font-size: 24px;
+}
+
+.gana-maquina {
+  color: var(--color-perdedor);
+}
+
+.gana-jugador {
+  color: var(--color-ganador);
+}
+
+@media (max-width: 450px) {
+  .game-container {
+    width: 320px;
+  } 
+  
+  h1 {
+    font-size: 24px;
+  }
+}

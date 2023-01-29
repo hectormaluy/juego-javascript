@@ -6,33 +6,21 @@
 
 <body>
   <main>
-    <h1>Juego de piedra, papel o tijera</h1>
-    <article>
-      <h2>Instrucciones</h2>
-      <p>Escribe uno de los siguientes valores y haz click en el boto&#769;n <q>enviar</q> para recibir respuesta de la maquina: 
-        <ol>
-          <li>piedra</li>
-          <li>papel</li>
-          <li>tijera</li>
-        </ol>
-      </p>
-    </article>
-    <form>
-     <h3>&#161;A jugar se ha dicho!</h3>
-     <label for="valor">piedra, papel o tijera</label><br>  
-     <select id="valor" placeholder="Selecciona un valor">
-        <option value="">Selecciona un valor</option>
-        <option value="piedra">piedra</option>
-        <option value="papel">papel</option>
-        <option value="tijera">tijera</option>
-     </select> <br><br>
-      <button type="button" onclick="jugar()">Enviar</button> 
+    <h1>Juego de piedra, papel o tijera</h1> 
+    <section class="game-container">
+      <p class="titulo">Escoge tu jugada</p>
+      <div class="opciones">
+        <div id="piedra">🌑</div>
+        <div id="papel">📃</div>
+        <div id="tijera">✂</div>
+      </div>
       <hr>
-      <div id="resultado">
-        <h3>Resultado</h3>
-        <p id="presultado"></p>
-      </div>  
-    </form>
+      <div class="resultado">
+        <p>Resultado <span id="textoResultado" class=""></span></p>
+        <p>Maquina <span id="maquinaResultado"></span></p>
+        <p>Jugador <span id="jugadorResultado"></span></p>
+      </div>
+    </section>
   </main> 
 
   <script src="./piedra-papel-tijera.js" type="text/javascript"></script>
